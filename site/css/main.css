@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a, .nav-ulist__page{
+
+    text-decoration: none;
+    display:inline;
+    color: #222;
+
+}
+
+header { 
+    width: 100%;
+    height:7.50em;
+    display:grid;
+    grid-template-rows:1fr 1fr;
+
+}
+
+/* Firts spoty */
+
+header .header-icons-container {
+
+    width:100%;
+    align-items:center;
+    justify-content: space-between;
+    justify-self: end;
+    height:3.70em;
+    display:flex;
+    background-color: #4acfac;
+
+}
+
+.header-icons-container p {
+    width:4em;
+}
+
+header .header-icons-container .icons {
+
+    width: 1.2em;
+    height: auto;
+    display:flex;
+    margin-right: 4.12em;
+}
+
+header .icons span {
+    color: #fff;
+}
+
+nav {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    height:3.89em;
+}
+
+nav .nav-logo-container{
+    margin-left:3.4em;
+
+}
+
