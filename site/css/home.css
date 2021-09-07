@@ -1,0 +1,15 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home__body {
+    display:grid;
+    grid-template-rows: 8fr 1fr;
+}
+
+.home__header {
+    grid-row:2;
+    margin-bottom:3em; 
+}

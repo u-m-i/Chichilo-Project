@@ -1,0 +1,20 @@
+{
+    "name":"umi/crud",
+    "description": "My own CURD",
+    "autoload": {
+        "psr-4":{
+            "crud\\": "scr/"
+        },
+        "files":[
+            "scr/helpers.php"
+        ]
+    },
+    "license": "MIT",
+    "authors":[
+        {
+            "name":"umi",
+            "email":"miguel@selecu.net"
+        }
+    ],
+    "minimun-stability":"dev"
+}

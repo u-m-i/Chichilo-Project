@@ -1,0 +1,11 @@
+#Archivos de prueba
+
+eg/
+
+#Archivos binarios
+
+assests/
+
+#PHP stuff
+
+vendor/
