@@ -44,10 +44,10 @@ if(! function_exists('create_user')){
 
             if (mysqli_query($conextion,$query) === TRUE){
                 echo"<br />". "<script>alert('New user added');</script>";
-                echo "<br />" . "<h2>". "The user was well register" . "</h2>";
+                echo "<br />" . "<h2>". "The user was well registered" . "</h2>";
                 echo "<h4>" . "Bienvenido: " .$name . "</h4>" . "\n\n";
-                echo "<h5>" . "Go back: " . "<a href='..\..\index.html'>Home</a>" ."</h5>";
-                echo "<h5>" . "Register up another: " . "<a href='Chichilo-Project/site/signin.html'>Create another user</a>"."</h5";
+                echo "<h5>" . "Go back: " . "<a href='index.html'>Home</a>" ."</h5>";
+                echo "<h5>" . "Register up another: " . "<a href='signin.html'>Create another user</a>"."</h5";
             }else{
                 echo "<h5>". "Fatal Error, user unsucessfully register"."</h5>";
                 echo "<br />" . $conextion->error;
