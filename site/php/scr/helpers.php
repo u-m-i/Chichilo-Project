@@ -27,51 +27,44 @@ if(! function_exists('verify'))
     }
 }
 
-if(! function_exists('create_user')){
+if(! function_exists('confirm')){
 
-    function create_user($conextion, $name, $lastname, $username, $email, $password){
-        $sql = "SELECT * FROM usuario WHERE email = '$email'";
+    function confirm($conextion,$email){
 
-        $result = mysqli_query($conextion,$sql);
-        $count = mysqli_num_rows($result);
-
-        if($count == 1){
-            echo "El usuario ya está regristado";
-            echo"<a href='../../signin.html'>Porfavor ingrese otra información</a>";
-        }else {
-
-            $query = "INSERT INTO usuario (name,last_name,username,email,password) VALUES ('".$name."','".$lastname."', '".$username."','".$email."', '".$password."')";
-
-            if (mysqli_query($conextion,$query) === TRUE){
-                echo"<br />". "<script>alert('New user added');</script>";
-                echo "<br />" . "<h2>". "The user was well register" . "</h2>";
-                echo "<h4>" . "Bienvenido: " .$name . "</h4>" . "\n\n";
-                echo "<h5>" . "Go back: " . "<a href='..\..\index.html'>Home</a>" ."</h5>";
-                echo "<h5>" . "Register up another: " . "<a href='Chichilo-Project/site/signin.html'>Create another user</a>"."</h5";
-            }else{
-                echo "<h5>". "Fatal Error, user unsucessfully register"."</h5>";
-                echo "<br />" . $conextion->error;
-            }
-        }
-        mysqli_close($conextion);
+        return crud\Format::confirm($conextion,$email);
     }
 }
 
-if(! function_exists('create_report')){
+if(! function_exists('read')){
     
-    function create_report($conextion){
-        $query = "SELECT * FROM usuario";
-        $result = $conextion->query($query);
+    function read($conextion){
 
-        while($row = mysqli_fetch_row($result)){
-                echo "<tr><td>".$row[0]."</td>";
-                echo "<td>".$row[1]."</td>";
-                echo "<td>".$row[2]."</td>";
-                echo "<td>".$row[3]."</td>";
-                echo "<td><a href='.\upadte.php?email=".$row[3]."'>Modify sign</a></td>";
-                echo "<td><a href='.\delete.php?email=".$row[3]."'>Delete sign</a></td>";
-        }
-        mysqli_free_result($result);
-        mysqli_close($result); 
+        return crud\Format::fetchAll($conextion); 
+    }
+}
+
+
+if(! function_exists('update')){
+    
+    function update($conextion){
+        
+    }
+}
+
+if(! function_exists('delete_user')){
+    
+    function delete_user($conextion, $email){
+        
+        $query = "DELETE FROM usuario WHERE usuario.email = {$email}";
+
+
+        
+
+    }
+}
+
+if(! function_exists('experiment')){
+    function experiment(){
+        return crud\Format::experiment();
     }
 }

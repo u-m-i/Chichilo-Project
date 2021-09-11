@@ -11,3 +11,7 @@ assests/
 
 vendor/
 
+#VIM stuff
+
+*.swp
+
