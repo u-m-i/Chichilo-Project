@@ -67,7 +67,5 @@ class Format{
 
         $conextion = new mysqli($host, $user, $password, $dbname);
         return $conextion;
-
-
     }
 }
