@@ -17,10 +17,10 @@
         </tr>
     <?php
             
-            require __DIR__ . '.\vendor\autoload.php';
+            require __DIR__ . '.\vendor\autoPload.php';
             
             $conextion = experiment();
-            $email = $_POST['email'];
+            $email = $_DELETE['email'];
 
             if(verify($conextion)){
                 delete_user($conextion, $email);
