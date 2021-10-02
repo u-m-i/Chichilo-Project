@@ -44,7 +44,7 @@
                 <h3><?php echo "Bienvenido: $name"; ?></h3>
                 <h5>Go back: <a href='../index.html'>Home</a></h5>
                 <h5>Register up another: <a href='../signin.html'>Create another user</a></h5>
-                <h5>See all: <a href='read.php'>Create another user</a></h5>
+                <h5>See all: <a href='read.php'>See the data base</a></h5>
 
             <?php }else{ ?>
 
