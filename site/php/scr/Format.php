@@ -5,11 +5,26 @@ namespace crud;
 use mysqli;
 
 class Format{
+
+    //Experiment
     public static function lower($value){
 
         return strtolower($value);
     }
 
+    public static function experiment(){
+
+        $host = "127.0.0.1";
+        // Uncomment this variable, to enter the port 
+        #$port = "";
+        $dbname = "chichilo";
+        $user='root';
+        $password="";
+        $conextion = new mysqli($host, $user, $password, $dbname);
+        return $conextion;
+
+    }
+    
     public static function conexDB() 
     {
         // Change the variables to your data base
@@ -19,6 +34,7 @@ class Format{
 
         // Uncomment this variable, to enter the port 
         #$port = "";
+
         $dbname = "chichilo";
         $user='root';
         $password="";
@@ -56,16 +72,11 @@ class Format{
         return $result;
     }
 
-    public static function experiment(){
-        $host = "127.0.0.1";
+    public static function deleteRow($conextion, $email){
 
-        // Uncomment this variable, to enter the port 
-        #$port = "";
-        $dbname = "chichilo";
-        $user='root';
-        $password="";
+    }
 
-        $conextion = new mysqli($host, $user, $password, $dbname);
-        return $conextion;
+    public static function changeRow($conextion, $email){
+
     }
 }

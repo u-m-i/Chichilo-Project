@@ -1,1 +1,119 @@
+/*Import section*/
 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+:root{
+    --over-white:#eeee;
+    --hover-subline:#222;
+    --very-light-pink:#c7c7c7;
+    --text-input-field:#f7f7f7;
+
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li {
+    text-decoration: none;
+    list-style:none;
+    color:#111;
+}
+
+body {
+    background-color: #924747 ;
+    /* overflow-x: hidden; */
+}
+
+.header {
+
+    /*Position*/
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height:5em;
+    width:100vw;
+    padding:2em;
+
+}
+
+.header__section{
+    display: flex;
+    text-align:center;
+    padding-left: 1.34em;
+    width:10%;
+    height: 50%;
+}
+
+.header__section a{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2.3em;
+}
+
+.header__section a:hover{
+    text-decoration: underline dotted var(--hover-subline) 0.083em;
+    font-weight: 800;
+    font-size: 2.4em;
+}
+
+.header__nav{
+    padding:0.7em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:74%;
+    height:100%;
+    padding-top: 3.78em;
+    margin-right:2.4em;
+}
+
+.nav__section .section__icons span {
+    padding: 0.1em 0.75em;
+    font-weight: 1em;
+    font-size: 2em;
+    color:#323; 
+}
+
+.icons {
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.links a{
+    padding: 1.09em;
+    font-family: 'Fredericka the Great', cursive;
+    color: #212;
+    font-weight: 500;
+    font-size:1.58em;
+}
+
+.links a:hover{
+    text-decoration: underline dotted var(--hover-subline) 0.083em;
+    font-weight: 900;
+    font-size: 1.68em;
+}
+
+.nav__section--profile{
+    display: flex;
+    align-items:center;
+    width:1%;
+    height:1%;
+}
+
+.nav__section--profile img{
+    width:5%;
+    height:5%;
+}
+
+.nav__section--profile ul{
+    display: none;
+}

@@ -4,7 +4,7 @@ if(! function_exists('conex'))
 {
     function conex()
     {
-        return crud\Format::conexDB();
+        return crud\Format::experiment();
     }
 }
 
@@ -30,7 +30,6 @@ if(! function_exists('verify'))
 if(! function_exists('confirm')){
 
     function confirm($conextion,$email){
-
         return crud\Format::confirm($conextion,$email);
     }
 }
@@ -38,28 +37,23 @@ if(! function_exists('confirm')){
 if(! function_exists('read')){
     
     function read($conextion){
-
         return crud\Format::fetchAll($conextion); 
     }
 }
 
 
-if(! function_exists('update')){
+if(! function_exists('update_user')){
     
     function update($conextion){
-        
+        return crud\Format::changeRow($conextion);
     }
 }
 
 if(! function_exists('delete_user')){
     
     function delete_user($conextion, $email){
+        return crud\Format::deleteRow($conextion, $email);
         
-        $query = "DELETE FROM usuario WHERE usuario.email = {$email}";
-
-
-        
-
     }
 }
 
