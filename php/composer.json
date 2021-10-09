@@ -1,6 +1,6 @@
 {
     "name":"umi/crud",
-    "description": "My own CURD",
+    "description": "CRUD made at class, and with a lot of hard work",
     "autoload": {
         "psr-4":{
             "crud\\": "scr/"
