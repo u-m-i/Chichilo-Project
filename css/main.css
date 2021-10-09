@@ -31,6 +31,8 @@ body {
     /* overflow-x: hidden; */
 }
 
+/* Header section */
+
 .header {
 
     /*Position*/
@@ -117,3 +119,6 @@ body {
 .nav__section--profile ul{
     display: none;
 }
+
+/* End Header section */
+

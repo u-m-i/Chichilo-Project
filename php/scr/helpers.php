@@ -4,7 +4,7 @@ if(! function_exists('conex'))
 {
     function conex()
     {
-        return crud\Format::experiment();
+        return crud\Format::conexDB();
     }
 }
 
@@ -44,8 +44,8 @@ if(! function_exists('read')){
 
 if(! function_exists('update_user')){
     
-    function update($conextion){
-        return crud\Format::changeRow($conextion);
+    function update($conextion, $email){
+        return crud\Format::changeRow($conextion, $email);
     }
 }
 
@@ -54,11 +54,5 @@ if(! function_exists('delete_user')){
     function delete_user($conextion, $email){
         return crud\Format::deleteRow($conextion, $email);
         
-    }
-}
-
-if(! function_exists('experiment')){
-    function experiment(){
-        return crud\Format::experiment();
     }
 }
