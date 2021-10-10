@@ -4,9 +4,13 @@
 require __DIR__ . '.\vendor\autoload.php';
 
 $conextion = conex();
-$email = $_DELETE['email'];
-delete_user($conextion, $email);
+if(isset($_GET["id"])){
 
-include('read.php');
+    $id = $_GET["id"];
+    if(delete_user($conextion, $id)){
+        $_SESSION["message"] = 'User deleted succesfully';
+        header("Location: main.php");
+    }
+}
 
 ?>

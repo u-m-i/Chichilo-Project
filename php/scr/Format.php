@@ -53,12 +53,14 @@ class Format{
         return $result;
     }
 
-    public static function deleteRow($conextion, $email){
-        $query = "DELETE FROM `usuario` WHERE `usuario`.`email` = {$email}";
-        $conextion->query($query);
+    public static function deleteRow($conextion, $id){
+        $query = "DELETE FROM `usuario` WHERE `usuario`.`id` = '{$id}'";
+        $result = mysqli_query($conextion, $query);
+        return $result;
     }
 
-    public static function changeRow($conextion, $email){
+    public static function changeRow($conextion, $id){
+        return 0;
 
     }
 }

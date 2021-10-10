@@ -1,10 +1,6 @@
 <?php 
     require __DIR__ . '.\vendor\autoload.php';
-    include('./includes/header.html'); 
-?>
 
-    <main>
-    <?php
         #Initialize all the conextion and session    
         $conextion = conex();#Create the DB conextion
         
@@ -30,17 +26,13 @@
                 }
 
                 $_SESSION['message'] = 'successfully signed user';
-                header("Location: signin.php");
+                header("Location: main.php");
             }
             else{
                 $_SESSION['message'] = 'Cannot repeat a email';
-                header("location: sigin.php");
+                header("location: main.php");
             }
         }
-    ?>
-    </main>
-<?php 
-include("./includes/footer.html");
 
 mysqli_close($conextion);
 
