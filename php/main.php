@@ -59,10 +59,10 @@
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['username'];?></td>
                             <td>
-                                <a href="update.php?id=<?php echo $row['id']?>">
+                                <a href="update.php?id=<?php echo $row['id'];?>">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <a href="delete.php?id=<?php echo $row['id']?>">
+                                <a href="delete.php?id=<?php echo $row['id'];?>">
                                     <i class="far fa-trash-alt"></i>
                                 </a>
                             </td>
