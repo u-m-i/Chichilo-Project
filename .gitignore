@@ -2,12 +2,13 @@
 #Archivos de prueba
 
 eg/
+tmp.css
 
 #Archivos binarios
 
 assests/
 
-#PHP stuff
+#Composer stuff
 
 vendor/
 

@@ -1,13 +1,13 @@
 <?php 
     require __DIR__ . '.\vendor\autoload.php';
     include('./includes/header.html');
-    $conextion = conex();
     session_start();
+    $conextion = conex();
 
 ?>
-    <main class="main">
+    <main class="read">
         <?php if(isset($_SESSION['message'])) { ?>
-            <script>alert(<?= $_SESSION["message"] ?>);</script>
+            <script>alert('Succesfully done!');</script>
         <?php session_unset(); } ?>
 
         <section class="main-section">

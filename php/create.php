@@ -2,6 +2,7 @@
     require __DIR__ . '.\vendor\autoload.php';
 
         #Initialize all the conextion and session    
+        session_start();
         $conextion = conex();#Create the DB conextion
         
         if(isset($_POST['create_user'])){

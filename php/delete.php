@@ -1,9 +1,11 @@
 
 <?php
-//Call the components
+//Stablish the conextion
 require __DIR__ . '.\vendor\autoload.php';
 
+session_start();
 $conextion = conex();
+
 if(isset($_GET["id"])){
 
     $id = $_GET["id"];

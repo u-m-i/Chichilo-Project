@@ -2,6 +2,7 @@
 //Call the useful functions
 require __DIR__ . '.\vendor\autoload.php';
 
+session_start();
 $conextion = conex();
 
 if(isset($_GET['id'])){
@@ -28,11 +29,6 @@ if(isset($_POST['id'])){
     $last_name = $_POST["last_name"];
     $email = $_POST["email"];
     $username = $_POST["username"];
-    $password = hash(
-        'sha512',
-        '73b0c0eeb6e3b347a4c32822293c71c72dafa8f5b08961c1811ab4025fdf06a5dbf27b3b3200a7731b65ca36ff80a743',
-        $_POST["password"]
-    );
 
     $query = "UPDATE `usuario` SET name = '$name', last_name = '$last_name', email = '$email', username = '$username' WHERE id = '$id' ";
 
@@ -47,12 +43,14 @@ if(isset($_POST['id'])){
 include('./includes/header.html');
 ?>
 
-<section class="update-section">
+    <main class="main">
+        <section class="update-section">
+
             <a href="index.html" class="nav__a">Chichilo</a>
-            <h1 class="main-section__title">Create a new user</h1>
+            <h1 class="main-section__title">Change your data</h1>
             <p class="main-section__sub">You cannot enter a used email</p>
 
-            <form action="update.php?id=<?php echo $_GET['id']?>" method="post" class="section-form">
+            <form action="update.php?id=<?php echo $_GET['id']?>" method="post" class="update-section__form">
 
                     <label for="name" class="form-label">Name</label>
                     <input type="text" value="<?php echo $name ?>" name="name" id="name" placeholder="Enter your real name" class="form-input form-input__name" autofocus>
@@ -66,13 +64,11 @@ include('./includes/header.html');
                     <label for="username" class="form-label">Username</label>
                     <input type="text" value="<?php echo $username ?>" name="username" id="username" placeholder="How do u feel?" class="form-input form-input__username">
 
-                    <label for="password" class="form-label">Password</label>
-                    <input type="password" value="<?php echo $password ?>" name="password" id="username" placeholder="Trynna be cool" class="form-input form-input__password">
-
                     <input name="id" type="submit" value="Update User" class="form-button form-input__submit">
                     <input type="reset"  value="Cancell" class="form-button form-input__reset">
             </form>
         </section>
+    </main>
 
 <?php
 include("./includes/footer.html");
