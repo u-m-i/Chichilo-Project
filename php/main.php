@@ -11,7 +11,6 @@
         <?php session_unset(); } ?>
 
         <section class="main-section">
-            <a href="index.html" class="nav__a">Chichilo</a>
             <h1 class="main-section__title">Create a new user</h1>
             <p class="main-section__sub">You cannot enter a used email</p>
 
@@ -38,26 +37,26 @@
         </section>
 
         <section class="read-section">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>User Name</th>
-                        <th>Actions</th>
+            <table class="table-section__table">
+                <thead class="table-section__thead">
+                    <tr class="table-section__tr">
+                        <th class="table-section__th">Name</th>
+                        <th class="table-section__th">Last Name</th>
+                        <th class="table-section__th">Email</th>
+                        <th class="table-section__th">User Name</th>
+                        <th class="table-section__th">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-section__tbody">
                     <?php 
                     $query = "SELECT * FROM `usuario`";
                     $result = mysqli_query($conextion, $query);
                     while($row = mysqli_fetch_assoc($result)){ ?>
-                        <tr>
+                        <tr class="table-section__tr">
                             <td><?php echo $row['name'];?></td>
-                            <td><?php echo $row['last_name'];?></td>
+                            <td class="active-row"><?php echo $row['last_name'];?></td>
                             <td><?php echo $row['email'];?></td>
-                            <td><?php echo $row['username'];?></td>
+                            <td class="active-row"><?php echo $row['username'];?></td>
                             <td>
                                 <a href="update.php?id=<?php echo $row['id'];?>">
                                     <i class="fas fa-edit"></i>
