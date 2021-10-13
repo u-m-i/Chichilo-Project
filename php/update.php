@@ -37,6 +37,8 @@ if(isset($_POST['id'])){
         header("Location: main.php");
     }
 }
+
+
 ?>
 
 <?php 
@@ -65,7 +67,7 @@ include('./includes/header.html');
                     <input type="text" value="<?php echo $username ?>" name="username" id="username" placeholder="How do u feel?" class="form-input form-input__username">
 
                     <input name="id" type="submit" value="Update User" class="form-button form-input__submit">
-                    <input type="reset"  value="Cancell" class="form-button form-input__reset">
+                    <!-- <input type="reset"  value="Cancell" class="form-button form-input__reset"> -->
             </form>
         </section>
     </main>
@@ -73,5 +75,8 @@ include('./includes/header.html');
 <?php
 include("./includes/footer.html");
 ?> 
+<?php
+mysqli_close($conextion);
+session_unset();
 
 

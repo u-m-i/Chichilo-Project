@@ -36,6 +36,7 @@
         }
 
 mysqli_close($conextion);
+session_unset();
 
 
 

@@ -76,4 +76,5 @@
 <?php
 
 include("./includes/footer.html");
+mysqli_close($conextion);
 

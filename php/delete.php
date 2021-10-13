@@ -16,3 +16,7 @@ if(isset($_GET["id"])){
 }
 
 ?>
+
+<?php 
+mysqli_close($conextion);
+session_unset();
