@@ -24,6 +24,7 @@
                 $result = mysqli_query($conextion, $query);
                 if(!$result){
                     die("Something went wrong!");
+                    header("location: main.php");
                 }
 
                 $_SESSION['message'] = 'successfully signed user';
