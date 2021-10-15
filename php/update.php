@@ -30,9 +30,9 @@ if(isset($_POST['id'])){
     $email = $_POST["email"];
     $username = $_POST["username"];
 
-    $query = "UPDATE `usuario` SET name = '$name', last_name = '$last_name', email = '$email', username = '$username' WHERE id = '$id' ";
+    $query_2 = "UPDATE `usuario` SET name = '$name', last_name = '$last_name', email = '$email', username = '$username' WHERE id = '$id' ";
 
-    if(mysqli_query($conextion,$query)){
+    if(mysqli_query($conextion,$query_2)){
         $_SESSION['message'] = 'Your user was succesfully updated';
         header("Location: main.php");
     }
@@ -74,8 +74,6 @@ include('./includes/header.html');
 
 <?php
 include("./includes/footer.html");
-?> 
-<?php
 mysqli_close($conextion);
 session_unset();
 

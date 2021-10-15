@@ -4,7 +4,8 @@
         #Initialize all the conextion and session    
         session_start();
         $conextion = conex();#Create the DB conextion
-        
+        verify($conextion);
+
         if(isset($_POST['create_user'])){
 
             //All values
@@ -31,7 +32,7 @@
                 header("Location: main.php");
             }
             else{
-                $_SESSION['message'] = 'Cannot repeat a email';
+                $_SESSION['message'] = true;
                 header("location: main.php");
             }
         }

@@ -6,8 +6,8 @@
 
 ?>
     <main class="read">
-        <?php if(isset($_SESSION['message'])) { ?>
-            <script>alert('Succesfully done!');</script>
+        <?php if($_SESSION['message'] == true) { ?>
+            <script>alert('Bro, cannot repeat that shit!');</script>
         <?php session_unset(); } ?>
 
         <section class="main-section">
@@ -66,8 +66,7 @@
                                 </a>
                             </td>
                         </tr>
-                <?php }
-                    ?>
+                <?php } ?>
                 </tbody>
             </table>
         </section>
@@ -77,4 +76,3 @@
 
 include("./includes/footer.html");
 mysqli_close($conextion);
-
